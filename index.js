@@ -3,9 +3,11 @@ import db from "./db.js";
 import bodyParser from "body-parser";
 import personRoutes from "./routes/personRoutes.js";
 import menuRoutes from "./routes/menuRoutes.js";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // routes
